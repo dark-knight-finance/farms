@@ -86,6 +86,80 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.FTM,
     quoteTokenAdresses: contracts.wftm,
   },
+
+
+
+  {
+    pid: 6,
+    risk: 3,
+    lpSymbol: 'WETH-FTM LP',
+    lpAddresses: {
+      4002: '0x46F2cC2731f80Aa658B4408F9B533a0d19e9516E',
+      250: '0xbe612c02bee4b9feb6b38693510c6c2a2028866d',
+    },
+    tokenSymbol: 'WETH',
+    tokenAddresses: {
+      4002: '0xae13d989dac2f0debff460ac112a837c89baa7cd',
+      250: '0x74b23882a30290451A17c44f4F05243b6b58C76d',
+    },
+    quoteTokenSymbol: QuoteToken.FTM,
+    quoteTokenAdresses: contracts.wftm,
+  },
+
+
+  {
+    pid: 7,
+    risk: 3,
+    lpSymbol: 'FUST-UDSC LP',
+    lpAddresses: {
+      4002: '0x46F2cC2731f80Aa658B4408F9B533a0d19e9516E',
+      250: '0x10ee429ed505498e84f071460716dd0b9068f29f',
+    },
+    tokenSymbol: 'FUST',
+    tokenAddresses: {
+      4002: '0xae13d989dac2f0debff460ac112a837c89baa7cd',
+      250: '0x049d68029688eabf473097a2fc38ef61633a3c7a',
+    },
+    quoteTokenSymbol: QuoteToken.USDC,
+    quoteTokenAdresses: contracts.usdc,
+  },
+
+
+
+  {
+    pid: 8,
+    risk: 3,
+    lpSymbol: 'WBTC-FTM LP',
+    lpAddresses: {
+      4002: '0x46F2cC2731f80Aa658B4408F9B533a0d19e9516E',
+      250: '0xedd43f16aef83960ab7b3f2f66835e1e6e0cfb33',
+    },
+    tokenSymbol: 'WBTC',
+    tokenAddresses: {
+      4002: '0xae13d989dac2f0debff460ac112a837c89baa7cd',
+      250: '0x321162Cd933E2Be498Cd2267a90534A804051b11',
+    },
+    quoteTokenSymbol: QuoteToken.FTM,
+    quoteTokenAdresses: contracts.wftm,
+  },
+
+  {
+    pid: 9,
+    risk: 3,
+    lpSymbol: 'DAI-FTM LP',
+    lpAddresses: {
+      4002: '0x46F2cC2731f80Aa658B4408F9B533a0d19e9516E',
+      250: '0x4f4a0b4cf5ba98264a67726633d3cdef392411a9',
+    },
+    tokenSymbol: 'DAI',
+    tokenAddresses: {
+      4002: '0xae13d989dac2f0debff460ac112a837c89baa7cd',
+      250: '0x8d11ec38a3eb5e956b052f67da8bdc9bef8abf3e',
+    },
+    quoteTokenSymbol: QuoteToken.FTM,
+    quoteTokenAdresses: contracts.wftm,
+  },
+
 ]
 
 export default farms

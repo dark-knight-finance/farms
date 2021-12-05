@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="229.5" height="216.5" viewBox="0 0 229.5 216.5">
+  <g id="FTMETH" transform="translate(2653 -3135)">
+    <g id="Group_1096" data-name="Group 1096" transform="translate(-11158.499 -1972)">
+      <circle id="Ellipse_37" data-name="Ellipse 37" cx="91" cy="91" r="91" transform="translate(8550.499 5139)" fill="#627eea" stroke="#fff" stroke-width="5"/>
+    </g>
+    <g id="Сгруппировать_1614" data-name="Сгруппировать 1614" transform="translate(-102 270)">
+      <g id="Эллипс_42" data-name="Эллипс 42" transform="translate(-2546 2870)" fill="#13b5ec" stroke="#fff" stroke-width="5">
+        <circle cx="44" cy="44" r="44" stroke="none"/>
+        <circle cx="44" cy="44" r="46.5" fill="none"/>
+      </g>
+      <g id="Сгруппировать_1792" data-name="Сгруппировать 1792" transform="translate(-2520.091 2884)">
+        <path id="Контур_17242" data-name="Контур 17242" d="M31.709,26.8l10.854-6.332V33.136ZM42.563,53.94,28.09,62.382,13.618,53.94V39.166L28.09,47.608l14.472-8.442ZM13.618,20.472,24.472,26.8,13.618,33.136ZM29.9,29.819l10.854,6.332L29.9,42.482ZM26.281,42.482,15.427,36.151l10.854-6.332ZM40.754,17.457,28.09,24.693,15.427,17.457,28.09,9.92ZM10,16.251v39.5L28.09,66l18.09-10.251v-39.5L28.09,6Z" transform="translate(-10 -6)" fill="#fff" fill-rule="evenodd"/>
+      </g>
+    </g>
+    <g id="Сгруппировать_1805" data-name="Сгруппировать 1805" transform="translate(-2553.568 3199.495)">
+      <path id="Path" d="M632.2,207.1v43.255l36.558,16.338Z" transform="translate(-595.642 -207.1)" fill="rgba(255,255,255,0.6)"/>
+      <path id="Path_1_" d="M497.358,207.1,460.8,266.693l36.558-16.338Z" transform="translate(-460.8 -207.1)" fill="#fff"/>
+      <path id="Path_2_" d="M632.2,539.622v29.391L668.779,518.4Z" transform="translate(-595.642 -452.003)" fill="rgba(255,255,255,0.6)"/>
+      <path id="Path_3_" d="M497.358,569.014V539.622L460.8,518.4Z" transform="translate(-460.8 -452.003)" fill="#fff"/>
+      <path id="Path_4_" d="M632.2,447.46l36.558-21.222L632.2,409.9Z" transform="translate(-595.642 -366.645)" fill="rgba(255,255,255,0.2)"/>
+      <path id="Path_5_" d="M460.8,426.238l36.558,21.222V409.9Z" transform="translate(-460.8 -366.645)" fill="rgba(255,255,255,0.6)"/>
+    </g>
+  </g>
+</svg>
