@@ -160,6 +160,24 @@ const farms: FarmConfig[] = [
     quoteTokenAdresses: contracts.wftm,
   },
 
+
+  {
+    pid: 10,
+    risk: 3,
+    lpSymbol: 'Fatcake-FTM LP',
+    lpAddresses: {
+      4002: '0x46F2cC2731f80Aa658B4408F9B533a0d19e9516E',
+      250: '0x8b65868407f3c60C405d2AF096c92247Ed1F7c33',
+    },
+    tokenSymbol: 'FatCake',
+    tokenAddresses: {
+      4002: '0xae13d989dac2f0debff460ac112a837c89baa7cd',
+      250: '0x4a3DCE89cA816D4F10864664B6503df95a92d879',
+    },
+    quoteTokenSymbol: QuoteToken.FTM,
+    quoteTokenAdresses: contracts.wftm,
+  },
+
 ]
 
 export default farms

@@ -38,6 +38,26 @@ const pools: PoolConfig[] = [
     addLiquidityUrl:
       'https://dex.knightswap.financial/#/swap?outputCurrency=0x6cc0E0AedbbD3C35283e38668D959F6eb3034856',
   },
+
+  {
+    sousId: 2,
+    tokenName: 'FatCake',
+    stakingTokenName: QuoteToken.dKNIGHT,
+    stakingTokenAddress: '0x6cc0E0AedbbD3C35283e38668D959F6eb3034856',
+    contractAddress: {
+      250: '0x0D1726f6Ac89EACC534C98c109dB699eB2ed555d',
+      4002: '0xe790a0683b669089AdC199996F89Bd40FEd4C559',
+    },
+    poolCategory: PoolCategory.CORE,
+    projectLink: 'https://www.fantomcake.com/',
+    harvest: true,
+    tokenPerBlock: '0.04863',
+    sortOrder: 999,
+    isFinished: false,
+    tokenDecimals: 18,
+    addLiquidityUrl:
+      'https://darkdex.knightswap.financial/#/swap?outputCurrency=0x4a3DCE89cA816D4F10864664B6503df95a92d879',
+  },
   // {
   //   sousId: 2,
   //   tokenName: 'Guard',
