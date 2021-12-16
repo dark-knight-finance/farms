@@ -41,7 +41,7 @@ const pools: PoolConfig[] = [
 
   {
     sousId: 2,
-    tokenName: 'FatCake',
+    tokenName: 'FATCAKE',
     stakingTokenName: QuoteToken.dKNIGHT,
     stakingTokenAddress: '0x6cc0E0AedbbD3C35283e38668D959F6eb3034856',
     contractAddress: {
@@ -57,6 +57,27 @@ const pools: PoolConfig[] = [
     tokenDecimals: 18,
     addLiquidityUrl:
       'https://darkdex.knightswap.financial/#/swap?outputCurrency=0x4a3DCE89cA816D4F10864664B6503df95a92d879',
+  },
+
+
+  {
+    sousId: 3,
+    tokenName: 'DEFI',
+    stakingTokenName: QuoteToken.dKNIGHT,
+    stakingTokenAddress: '0x6cc0E0AedbbD3C35283e38668D959F6eb3034856',
+    contractAddress: {
+      250: '0x1F8Bb17cf33895FF0f6aC5371B71740E87508f4D',
+      4002: '0xe790a0683b669089AdC199996F89Bd40FEd4C559',
+    },
+    poolCategory: PoolCategory.CORE,
+    projectLink: 'https://ftm.defilaunch.finance/',
+    harvest: true,
+    tokenPerBlock: '0.00954861111',
+    sortOrder: 999,
+    isFinished: false,
+    tokenDecimals: 18,
+    addLiquidityUrl:
+      'https://darkdex.knightswap.financial/#/swap?outputCurrency=0xef393310b708761e3b6b59813ef41fe45d853cec',
   },
   // {
   //   sousId: 2,

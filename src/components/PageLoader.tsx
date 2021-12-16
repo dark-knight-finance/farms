@@ -12,8 +12,8 @@ const Wrapper = styled(Page)`
 const PageLoader: React.FC = () => {
   return (
     <Wrapper>
-      <Spinner />
-    </Wrapper>
+      {/* <Spinner /> */}
+      <img src="/images/knight/k4.svg" alt="cake logo" width="64" height="64" className="sc-eLgOdN kJNvFl"/>    </Wrapper>
   )
 }
 

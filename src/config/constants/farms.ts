@@ -110,12 +110,12 @@ const farms: FarmConfig[] = [
   {
     pid: 7,
     risk: 3,
-    lpSymbol: 'FUST-UDSC LP',
+    lpSymbol: 'FUSDT-USDC LP',
     lpAddresses: {
       4002: '0x46F2cC2731f80Aa658B4408F9B533a0d19e9516E',
       250: '0x10ee429ed505498e84f071460716dd0b9068f29f',
     },
-    tokenSymbol: 'FUST',
+    tokenSymbol: 'FUSDT',
     tokenAddresses: {
       4002: '0xae13d989dac2f0debff460ac112a837c89baa7cd',
       250: '0x049d68029688eabf473097a2fc38ef61633a3c7a',
@@ -164,15 +164,33 @@ const farms: FarmConfig[] = [
   {
     pid: 10,
     risk: 3,
-    lpSymbol: 'Fatcake-FTM LP',
+    lpSymbol: 'FATCAKE-FTM LP',
     lpAddresses: {
       4002: '0x46F2cC2731f80Aa658B4408F9B533a0d19e9516E',
       250: '0x8b65868407f3c60C405d2AF096c92247Ed1F7c33',
     },
-    tokenSymbol: 'FatCake',
+    tokenSymbol: 'FATCAKE',
     tokenAddresses: {
       4002: '0xae13d989dac2f0debff460ac112a837c89baa7cd',
       250: '0x4a3DCE89cA816D4F10864664B6503df95a92d879',
+    },
+    quoteTokenSymbol: QuoteToken.FTM,
+    quoteTokenAdresses: contracts.wftm,
+  },
+
+
+  {
+    pid: 11,
+    risk: 3,
+    lpSymbol: 'DEFI-FTM LP',
+    lpAddresses: {
+      4002: '0x46F2cC2731f80Aa658B4408F9B533a0d19e9516E',
+      250: '0x6B94F5C3944CEb619b718C6aA868DD8374e5aF4a',
+    },
+    tokenSymbol: 'DEFI',
+    tokenAddresses: {
+      4002: '0xae13d989dac2f0debff460ac112a837c89baa7cd',
+      250: '0xef393310b708761e3b6b59813ef41fe45d853cec',
     },
     quoteTokenSymbol: QuoteToken.FTM,
     quoteTokenAdresses: contracts.wftm,

@@ -47,7 +47,7 @@ const Farm: React.FC = () => {
     console.log('quote price 3', stakingTokenFarm)
     // /!\ Assume that the farm quote price is BNB
     const stakingTokenPriceInBNB = isBnbPool ? new BigNumber(1) : new BigNumber(stakingTokenFarm?.tokenPriceVsQuote)
-    console.log('quote price 2', stakingTokenPriceInBNB)
+    console.log('quote price 2', stakingTokenPriceInBNB,pool.tokenName)
     const rewardTokenPriceInBNB = priceToBnb(
       pool.tokenName,
       rewardTokenFarm?.tokenPriceVsQuote,
