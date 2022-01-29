@@ -54,16 +54,45 @@ const config: MenuEntry[] = [
   {
     label: 'Audits',
     icon: 'AuditIcon',
-    href: '#',
+    href: 'https://github.com/TechRate/Smart-Contract-Audits/blob/main/December/DarkKnightSwap.pdf',
   },
   {
-    label: 'Listing',
+    label: 'Analytics',
     icon: 'InfoIcon',
+    items: [
+      {
+        label: 'Overview',
+        href: 'https://darkinfo.knightswap.financial/',
+      },
+      {
+        label: 'Tokens',
+        href: 'https://darkinfo.knightswap.financial/tokens',
+      },
+      {
+        label: 'Pairs',
+        href: 'https://darkinfo.knightswap.financial/pairs',
+      },
+      {
+        label: 'Accounts',
+        href: 'https://darkinfo.knightswap.financial/accounts',
+      },
+      // {
+      //   label: 'AstroTools',
+      //   href: 'https://app.astrotools.io/pancake-pair-explorer/0x19e7cbecdd23a16dfa5573df54d98f7caae03019',
+      // },
+    ],
+  },
+
+  {
+    label: 'Listing',
+    icon: 'HandshakeIcon',
     items: [
       {
         label: 'FTMScan',
         href: 'https://ftmscan.com/token/0x6cc0E0AedbbD3C35283e38668D959F6eb3034856',
       },
+      {label:"Partnership",
+    href:"https://forms.gle/WFLuTdK9gtcXXPBr8"},
       {
         label: 'DappRadar',
         href: '',

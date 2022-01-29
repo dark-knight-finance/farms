@@ -196,6 +196,129 @@ const farms: FarmConfig[] = [
     quoteTokenAdresses: contracts.wftm,
   },
 
+
+  {
+    pid: 12,
+    risk: 3,
+    lpSymbol: 'DEP-FTM LP',
+    lpAddresses: {
+      4002: '0x46F2cC2731f80Aa658B4408F9B533a0d19e9516E',
+      250: '0x503880630DAE08BA6c60C52F2632Abce7Ff34CBF',
+    },
+    tokenSymbol: 'DEP',
+    tokenAddresses: {
+      4002: '0xae13d989dac2f0debff460ac112a837c89baa7cd',
+      250: '0x8dFDC61c7c7551D0DEec950A2822eB59cddb8f59',
+    },
+    quoteTokenSymbol: QuoteToken.FTM,
+    quoteTokenAdresses: contracts.wftm,
+  },
+  {
+    pid: 13,
+    risk: 3,
+    lpSymbol: 'DUO-FTM LP',
+    lpAddresses: {
+      4002: '0x46F2cC2731f80Aa658B4408F9B533a0d19e9516E',
+      250: '0x10dA5667874782624905331964dB64B1197866C0',
+    },
+    tokenSymbol: 'DUO',
+    tokenAddresses: {
+      4002: '0xae13d989dac2f0debff460ac112a837c89baa7cd',
+      250: '0x779d5AECf90c724347B6A5a92083DaF57296459E',
+    },
+    quoteTokenSymbol: QuoteToken.FTM,
+    quoteTokenAdresses: contracts.wftm,
+  },
+
+  {
+    pid: 14,
+    risk: 3,
+    lpSymbol: 'DFY-USDC LP',
+    lpAddresses: {
+      4002: '0x46F2cC2731f80Aa658B4408F9B533a0d19e9516E',
+      250: '0x203056e0dfE3Eca755eb060e438242a4F559B7d8',
+    },
+    tokenSymbol: 'DFY',
+    tokenAddresses: {
+      4002: '0xae13d989dac2f0debff460ac112a837c89baa7cd',
+      250: '0x84b0b7718f8480a9eda3133fd385d7edf2b1d1c4',
+    },
+    quoteTokenSymbol: QuoteToken.USDC,
+    quoteTokenAdresses: contracts.usdc,
+  },
+
+
+  {
+    pid: 15,
+    risk: 3,
+    lpSymbol: 'AOD-FTM LP',
+    lpAddresses: {
+      4002: '0x46F2cC2731f80Aa658B4408F9B533a0d19e9516E',
+      250: '0x98e0d6A39863E1867b5C35655631129DBd78f22C',
+    },
+    tokenSymbol: 'AOD',
+    tokenAddresses: {
+      4002: '0xae13d989dac2f0debff460ac112a837c89baa7cd',
+      250: '0x632819c470cf8c1b4b09ca12d5d3e0c2d19c987d',
+    },
+    quoteTokenSymbol: QuoteToken.FTM,
+    quoteTokenAdresses: contracts.wftm,
+  },
+  {
+    pid: 16,
+    risk: 3,
+    lpSymbol: 'FLORY-FTM LP',
+    lpAddresses: {
+      4002: '0x46F2cC2731f80Aa658B4408F9B533a0d19e9516E',
+      250: '0xa8213d26B19a2184db4200A07ab1C9FA51b058dA',
+    },
+    tokenSymbol: 'FLORY',
+    tokenAddresses: {
+      4002: '0xae13d989dac2f0debff460ac112a837c89baa7cd',
+      250: '0x05ce3e76ede285d6ed2507d5472ca1c061ac9a8c',
+    },
+    quoteTokenSymbol: QuoteToken.FTM,
+    quoteTokenAdresses: contracts.wftm,
+  },
+
+  {
+    pid: 17,
+    risk: 3,
+    lpSymbol: 'FTMO-FTM LP',
+    lpAddresses: {
+      4002: '0x46F2cC2731f80Aa658B4408F9B533a0d19e9516E',
+      250: '0x46f702bb9F114BAA762ce1312C27f028E99C7382',
+    },
+    tokenSymbol: 'FTMO',
+    tokenAddresses: {
+      4002: '0xae13d989dac2f0debff460ac112a837c89baa7cd',
+      250: '0x9bD0611610A0f5133e4dd1bFdd71C5479Ee77f37',
+    },
+    quoteTokenSymbol: QuoteToken.FTM,
+    quoteTokenAdresses: contracts.wftm,
+  },
+
+
+  {
+    pid: 18,
+    risk: 3,
+    lpSymbol: 'NAUT-FTM LP',
+    lpAddresses: {
+      4002: '0x46F2cC2731f80Aa658B4408F9B533a0d19e9516E',
+      250: '0xf429c5a44f98661c52910938e205Ca7e419E9731',
+    },
+    tokenSymbol: 'NAUT',
+    tokenAddresses: {
+      4002: '0xae13d989dac2f0debff460ac112a837c89baa7cd',
+      250: '0x9c11ca3b1012bb752e1b57f939e3a86af354675c',
+    },
+    quoteTokenSymbol: QuoteToken.FTM,
+    quoteTokenAdresses: contracts.wftm,
+  },
+
+  
 ]
 
+
 export default farms
+

@@ -1,24 +1,7 @@
 import { PoolConfig, QuoteToken, PoolCategory } from './types'
 
 const pools: PoolConfig[] = [
-  // {
-  //   sousId: 0,
-  //   tokenName: 'KNIGHT',
-  //   stakingTokenName: QuoteToken.KNIGHT,
-  //   stakingTokenAddress: '0x6cc0E0AedbbD3C35283e38668D959F6eb3034856',
-  //   contractAddress: {
-  //     250: '0xb02e3A4B5ebC315137753e24b6Eb6aEF7D602E40',
-  //     4002: '0xb02e3A4B5ebC315137753e24b6Eb6aEF7D602E40',
-  //   },
-  //   poolCategory: PoolCategory.CORE,
-  //   projectLink: 'https://knightswap.financial/',
-  //   harvest: true,
-  //   tokenPerBlock: '1',
-  //   sortOrder: 1,
-  //   isFinished: false,
-  //   tokenDecimals: 18,
-  //   addLiquidityUrl: "https://dex.knightswap.financial/#/swap?outputCurrency=0x6cc0E0AedbbD3C35283e38668D959F6eb3034856"
-  // },
+  
   {
     sousId: 1,
     tokenName: 'Undead',
@@ -33,11 +16,14 @@ const pools: PoolConfig[] = [
     harvest: true,
     tokenPerBlock: '0.028935185185185185',
     sortOrder: 999,
-    isFinished: false,
+    isFinished: true,
     tokenDecimals: 18,
     addLiquidityUrl:
       'https://dex.knightswap.financial/#/swap?outputCurrency=0x6cc0E0AedbbD3C35283e38668D959F6eb3034856',
   },
+
+ 
+
 
   {
     sousId: 2,
@@ -53,11 +39,14 @@ const pools: PoolConfig[] = [
     harvest: true,
     tokenPerBlock: '0.04863',
     sortOrder: 999,
-    isFinished: false,
+    isFinished: true,
     tokenDecimals: 18,
     addLiquidityUrl:
       'https://darkdex.knightswap.financial/#/swap?outputCurrency=0x4a3DCE89cA816D4F10864664B6503df95a92d879',
   },
+
+
+ 
 
 
   {
@@ -74,66 +63,214 @@ const pools: PoolConfig[] = [
     harvest: true,
     tokenPerBlock: '0.00954861111',
     sortOrder: 999,
+    isFinished: true,
+    tokenDecimals: 18,
+    addLiquidityUrl:
+      'https://darkdex.knightswap.financial/#/swap?outputCurrency=0xef393310b708761e3b6b59813ef41fe45d853cec',
+  },
+
+  {
+    sousId: 4,
+    tokenName: 'DEP',
+    stakingTokenName: QuoteToken.dKNIGHT,
+    stakingTokenAddress: '0x6cc0E0AedbbD3C35283e38668D959F6eb3034856',
+    contractAddress: {
+      250: '0x6A7b85c09eae5126d1dE7e9411fE5d4454047CB3',
+      4002: '0xe790a0683b669089AdC199996F89Bd40FEd4C559',
+    },
+    poolCategory: PoolCategory.CORE,
+    projectLink: 'https://dea.sg/',
+    harvest: true,
+    tokenPerBlock: '0.167',
+    sortOrder: 999,
+    isFinished: true,
+    tokenDecimals: 18,
+    addLiquidityUrl:
+      'https://darkdex.knightswap.financial/#/swap?outputCurrency=0x8dfdc61c7c7551d0deec950a2822eb59cddb8f59',
+  },
+
+  {
+    sousId: 5,
+    tokenName: 'DUO',
+    stakingTokenName: QuoteToken.dKNIGHT,
+    stakingTokenAddress: '0x6cc0E0AedbbD3C35283e38668D959F6eb3034856',
+    contractAddress: {
+      250: '0x2339f1efe6bb693717ccb4418ec252c78e82a0ed',
+      4002: '0xe790a0683b669089AdC199996F89Bd40FEd4C559',
+    },
+    poolCategory: PoolCategory.CORE,
+    projectLink: '',
+    harvest: true,
+    tokenPerBlock: '0.00015614583',
+    sortOrder: 999,
+    isFinished: false,
+    tokenDecimals: 18,
+    addLiquidityUrl:
+      'https://darkdex.knightswap.financial/#/swap?outputCurrency=0x779d5aecf90c724347b6a5a92083daf57296459e',
+  },
+  {
+    sousId: 6,
+    tokenName: 'Undead',
+    stakingTokenName: QuoteToken.dKNIGHT,
+    stakingTokenAddress: '0x6cc0E0AedbbD3C35283e38668D959F6eb3034856',
+    contractAddress: {
+      250: '0x252F64BEa49b83894700433C20f11C2C11D58715',
+      4002: '0xe790a0683b669089AdC199996F89Bd40FEd4C559',
+    },
+    poolCategory: PoolCategory.CORE,
+    projectLink: 'https://undead.to/',
+    harvest: true,
+    tokenPerBlock: '0.028935185185185185',
+    sortOrder: 999,
+    isFinished: false,
+    tokenDecimals: 18,
+    addLiquidityUrl:
+      'https://dex.knightswap.financial/#/swap?outputCurrency=0x6cc0E0AedbbD3C35283e38668D959F6eb3034856',
+  },
+
+  {
+    sousId: 7,
+    tokenName: 'FATCAKE',
+    stakingTokenName: QuoteToken.dKNIGHT,
+    stakingTokenAddress: '0x6cc0E0AedbbD3C35283e38668D959F6eb3034856',
+    contractAddress: {
+      250: '0x0711510a3687A6f296D5c64Ae226f6772F7882C7',
+      4002: '0xe790a0683b669089AdC199996F89Bd40FEd4C559',
+    },
+    poolCategory: PoolCategory.CORE,
+    projectLink: 'https://www.fantomcake.com/',
+    harvest: true,
+    tokenPerBlock: '0.0868',
+    sortOrder: 999,
+    isFinished: false,
+    tokenDecimals: 18,
+    addLiquidityUrl:
+      'https://darkdex.knightswap.financial/#/swap?outputCurrency=0x4a3DCE89cA816D4F10864664B6503df95a92d879',
+  },
+
+
+
+  {
+    sousId: 8,
+    tokenName: 'DEFI',
+    stakingTokenName: QuoteToken.dKNIGHT,
+    stakingTokenAddress: '0x6cc0E0AedbbD3C35283e38668D959F6eb3034856',
+    contractAddress: {
+      250: '0x4eb0745d224e697f53712d40fd6165ce8cc380ba',
+      4002: '0xe790a0683b669089AdC199996F89Bd40FEd4C559',
+    },
+    poolCategory: PoolCategory.CORE,
+    projectLink: 'https://ftm.defilaunch.finance/',
+    harvest: true,
+    tokenPerBlock: '0.00954861111',
+    sortOrder: 999,
     isFinished: false,
     tokenDecimals: 18,
     addLiquidityUrl:
       'https://darkdex.knightswap.financial/#/swap?outputCurrency=0xef393310b708761e3b6b59813ef41fe45d853cec',
   },
-  // {
-  //   sousId: 2,
-  //   tokenName: 'Guard',
-  //   stakingTokenName: QuoteToken.KNIGHT,
-  //   stakingTokenAddress: '0x6cc0E0AedbbD3C35283e38668D959F6eb3034856',
-  //   contractAddress: {
-  //     97: '0xeb8A345ab74Ba098387a4ef18191C6D8793D9ae7',
-  //     56: '0x3b8B92D882127b5e14c9476615374a69e55d4Ca1',
-  //   },
-  //   poolCategory: PoolCategory.CORE,
-  //   projectLink: 'https://www.wolfdencrypto.com/?r_done=1',
-  //   harvest: true,
-  //   tokenPerBlock: '0.2054',
-  //   sortOrder: 999,
-  //   isFinished: false,
-  //   tokenDecimals: 18,
-  //   addLiquidityUrl: "https://dex.knightswap.financial/#/swap?outputCurrency=0x6cc0E0AedbbD3C35283e38668D959F6eb3034856"
 
-  // },
-  // {
-  //   sousId: 3,
-  //   tokenName: 'CRUSH',
-  //   stakingTokenName: QuoteToken.KNIGHT,
-  //   stakingTokenAddress: '0x6cc0E0AedbbD3C35283e38668D959F6eb3034856',
-  //   contractAddress: {
-  //     97: '0xeb8A345ab74Ba098387a4ef18191C6D8793D9ae7',
-  //     56: '0xF928BB46273043F98cc731CeFFc16A1ccC177707',
-  //   },
-  //   poolCategory: PoolCategory.CORE,
-  //   projectLink: 'https://www.bitcrush.com/',
-  //   harvest: true,
-  //   tokenPerBlock: '0.15625',
-  //   sortOrder: 999,
-  //   isFinished: false,
-  //   tokenDecimals: 18,
-  //   addLiquidityUrl: "https://dex.knightswap.financial/#/swap?outputCurrency=0x6cc0E0AedbbD3C35283e38668D959F6eb3034856"
 
-  // },
-  // {
-  //   sousId: 1,
-  //   tokenName: 'KNIGHT',
-  //   stakingTokenName: QuoteToken.CAKE,
-  //   stakingTokenAddress: '0x95b907a589F420955979C11271D5BA0da93cC5dC',
-  //   contractAddress: {
-  //     97: '0xc134bBA9e360E9bA463FCf72C3799C8Fa757954c',
-  //     56: '0xAfd61Dc94f11A70Ae110dC0E0F2061Af5633061A',
-  //   },
-  //   poolCategory: PoolCategory.CORE,
-  //   projectLink: 'https://trustwallet.com/',
-  //   harvest: true,
-  //   tokenPerBlock: '0.2',
-  //   sortOrder: 999,
-  //   isFinished: false,
-  //   tokenDecimals: 18,
-  // },
+  {
+    sousId: 9,
+    tokenName: 'AOD',
+    stakingTokenName: QuoteToken.dKNIGHT,
+    stakingTokenAddress: '0x6cc0E0AedbbD3C35283e38668D959F6eb3034856',
+    contractAddress: {
+      250: '0x79487e736de62a86650b4ddcaaee537dafe99d24',
+      4002: '0xe790a0683b669089AdC199996F89Bd40FEd4C559',
+    },
+    poolCategory: PoolCategory.CORE,
+    projectLink: 'https://agefantom.com/',
+    harvest: true,
+    tokenPerBlock: '0.00002222222',
+    sortOrder: 999,
+    isFinished: false,
+    tokenDecimals: 18,
+    addLiquidityUrl:
+      'https://darkdex.knightswap.financial/#/swap?outputCurrency=0x632819c470cf8c1b4b09ca12d5d3e0c2d19c987d',
+  },
+  {
+    sousId: 10,
+    tokenName: 'FLORY',
+    stakingTokenName: QuoteToken.dKNIGHT,
+    stakingTokenAddress: '0x6cc0E0AedbbD3C35283e38668D959F6eb3034856',
+    contractAddress: {
+      250: '0xdae2ee5ff523332ba018720fc1bf66c53cd9347b',
+      4002: '0xe790a0683b669089AdC199996F89Bd40FEd4C559',
+    },
+    poolCategory: PoolCategory.CORE,
+    projectLink: '',
+    harvest: true,
+    tokenPerBlock: '0.0583',
+    sortOrder: 999,
+    isFinished: false,
+    tokenDecimals: 18,
+    addLiquidityUrl:
+      'https://darkdex.knightswap.financial/#/swap?outputCurrency=0x632819c470cf8c1b4b09ca12d5d3e0c2d19c987d',
+  },
+  {
+    sousId: 11,
+    tokenName: 'FTMO',
+    stakingTokenName: QuoteToken.dKNIGHT,
+    stakingTokenAddress: '0x6cc0E0AedbbD3C35283e38668D959F6eb3034856',
+    contractAddress: {
+      250: '0x6f62e600124137b3f2a12afa71d1d635b6a98a88',
+      4002: '0xe790a0683b669089AdC199996F89Bd40FEd4C559',
+    },
+    poolCategory: PoolCategory.CORE,
+    projectLink: 'https://oasislaunch.me/',
+    harvest: true,
+    tokenPerBlock: '0.347',
+    sortOrder: 999,
+    isFinished: false,
+    tokenDecimals: 18,
+    addLiquidityUrl:
+      'https://darkdex.knightswap.financial/#/swap?outputCurrency=0x632819c470cf8c1b4b09ca12d5d3e0c2d19c987d',
+  },
+
+
+  {
+    sousId: 12,
+    tokenName: 'DEP',
+    stakingTokenName: QuoteToken.dKNIGHT,
+    stakingTokenAddress: '0x6cc0E0AedbbD3C35283e38668D959F6eb3034856',
+    contractAddress: {
+      250: '0x9d330322abb103f689d97498b8dfc6ef40a971ac',
+      4002: '0xe790a0683b669089AdC199996F89Bd40FEd4C559',
+    },
+    poolCategory: PoolCategory.CORE,
+    projectLink: 'https://dea.sg/',
+    harvest: true,
+    tokenPerBlock: '0.177',
+    sortOrder: 999,
+    isFinished: false,
+    tokenDecimals: 18,
+    addLiquidityUrl:
+      'https://darkdex.knightswap.financial/#/swap?outputCurrency=0x8dfdc61c7c7551d0deec950a2822eb59cddb8f59',
+  },
+
+
+  {
+    sousId: 13,
+    tokenName: 'NAUT',
+    stakingTokenName: QuoteToken.dKNIGHT,
+    stakingTokenAddress: '0x6cc0E0AedbbD3C35283e38668D959F6eb3034856',
+    contractAddress: {
+      250: '0x1fba4f898840b3efdfd1a9e51c9edf9d7add86e3',
+      4002: '0xe790a0683b669089AdC199996F89Bd40FEd4C559',
+    },
+    poolCategory: PoolCategory.CORE,
+    projectLink: 'https://fantom.astronaut.to/',
+    harvest: true,
+    tokenPerBlock: '0.192',
+    sortOrder: 999,
+    isFinished: false,
+    tokenDecimals: 18,
+    addLiquidityUrl:
+      'https://darkdex.knightswap.financial/#/swap?outputCurrency=0x9c11ca3b1012bb752e1b57f939e3a86af354675c',
+  },
+
 ]
 
 export default pools
