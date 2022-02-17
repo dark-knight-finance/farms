@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Card, CardBody, TicketRound, Text, Heading } from '@pancakeswap-libs/uikit'
+import { Card, CardBody, Text, Heading } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
 import useGetLotteryHasDrawn from 'hooks/useGetLotteryHasDrawn'
 import useTickets from 'hooks/useTickets'
@@ -46,6 +46,20 @@ const TicketCountWrapper = styled.div`
   display: flex;
   flex-direction: column;
 `
+
+
+
+const TicketRound = ()=>{
+  return <img
+
+  style={{
+    background:"#01427c",
+    padding:10,
+    borderRadius:"80%"
+  }}
+   src="/images/lottery/LotteryKnight.png" 
+  alt="lottery"/>
+}
 
 const TicketCard: React.FC<CardProps> = ({ isSecondCard = false }) => {
   const TranslateString = useI18n()

@@ -12,11 +12,11 @@ export default {
     4002: '0xae13d989dac2f0debff460ac112a837c89baa7cd',
   },
   lottery: {
-    250: '',
+    250: '0x309BDb11289692D7e64bF480adc4618A98325C12',
     4002: '',
   },
   lotteryNFT: {
-    250: '',
+    250: '0x0B6d09404d734cDb4DB918696030bDf277D8a1f4',
     4002: '',
   },
   mulltiCall: {

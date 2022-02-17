@@ -271,6 +271,92 @@ const pools: PoolConfig[] = [
       'https://darkdex.knightswap.financial/#/swap?outputCurrency=0x9c11ca3b1012bb752e1b57f939e3a86af354675c',
   },
 
+
+  {
+    sousId: 14,
+    tokenName: '5TABLE',
+    stakingTokenName: QuoteToken.dKNIGHT,
+    stakingTokenAddress: '0x6cc0E0AedbbD3C35283e38668D959F6eb3034856',
+    contractAddress: {
+      250: '0x1dEdCD33AdA6b63A0ae27a68bf8b67469119382a',
+      4002: '0xe790a0683b669089AdC199996F89Bd40FEd4C559',
+    },
+    poolCategory: PoolCategory.CORE,
+    projectLink: 'https://5table.finance/',
+    harvest: true,
+    tokenPerBlock: '0.00912',
+    sortOrder: 999,
+    isFinished: false,
+    tokenDecimals: 18,
+    addLiquidityUrl:
+      'https://darkdex.knightswap.financial/#/swap?outputCurrency=0x14d6111dbfd64ceb9676a494bf86aa9f7dd54acc',
+  },
+
+
+  {
+    sousId: 15,
+    tokenName: 'FAST',
+    stakingTokenName: QuoteToken.dKNIGHT,
+    stakingTokenAddress: '0x6cc0E0AedbbD3C35283e38668D959F6eb3034856',
+    contractAddress: {
+      250: '0x82edb8c3eb59a8a1c38c130277d75a701da2692b',
+      4002: '0xe790a0683b669089AdC199996F89Bd40FEd4C559',
+    },
+    poolCategory: PoolCategory.CORE,
+    projectLink: 'https://fastyield.app/',
+    harvest: true,
+    tokenPerBlock: '0.0071',
+    sortOrder: 999,
+    isFinished: false,
+    tokenDecimals: 18,
+    addLiquidityUrl:
+      'https://darkdex.knightswap.financial/#/swap?outputCurrency=0x0299461ee055bbb6de11fafe5a0636a0c3bd5e8d',
+  },
+
+
+  {
+    sousId: 16,
+    tokenName: 'MP',
+    stakingTokenName: QuoteToken.dKNIGHT,
+    stakingTokenAddress: '0x6cc0E0AedbbD3C35283e38668D959F6eb3034856',
+    contractAddress: {
+      250: '0x988CC800c08FC2f6C4157163BAc136BcC052f9d4',
+      4002: '0xe790a0683b669089AdC199996F89Bd40FEd4C559',
+    },
+    poolCategory: PoolCategory.CORE,
+    projectLink: 'https://minipanther.money/',
+    harvest: true,
+    tokenPerBlock: '0.0012',
+    sortOrder: 999,
+    isFinished: false,
+    tokenDecimals: 18,
+    addLiquidityUrl:
+      'https://darkdex.knightswap.financial/#/swap?outputCurrency=0x0299461ee055bbb6de11fafe5a0636a0c3bd5e8d',
+  },
+
+
+
+
+  {
+    sousId: 17,
+    tokenName: 'KNIGHT',
+    stakingTokenName: QuoteToken.wMP,
+    stakingTokenAddress: '0x376d7370347fd8baccfa918362d80fafe7792890',
+    contractAddress: {
+      250: '0x65bF6E7f453936a2B5e173482a822F40Ac7114b6',
+      4002: '0x65bF6E7f453936a2B5e173482a822F40Ac7114b6',
+    },
+    poolCategory: PoolCategory.CORE,
+    projectLink: 'https://minipanther.money/',
+    harvest: true,
+    tokenPerBlock: '0.039',
+    sortOrder: 999,
+    isFinished: false,
+    tokenDecimals: 18,
+    addLiquidityUrl:
+      'https://darkdex.knightswap.financial/#/swap?outputCurrency=0x0299461ee055bbb6de11fafe5a0636a0c3bd5e8d',
+  },
+
 ]
 
 export default pools

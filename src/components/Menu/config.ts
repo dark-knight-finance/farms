@@ -92,7 +92,7 @@ const config: MenuEntry[] = [
         href: 'https://ftmscan.com/token/0x6cc0E0AedbbD3C35283e38668D959F6eb3034856',
       },
       {label:"Partnership",
-    href:"https://forms.gle/WFLuTdK9gtcXXPBr8"},
+    href:"https://forms.gle/fHuk6oiHvjPNHQP38"},
       {
         label: 'DappRadar',
         href: '',

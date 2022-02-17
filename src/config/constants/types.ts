@@ -27,6 +27,8 @@ export enum QuoteToken {
   'TWT' = 'TWT',
   'UST' = 'UST',
   'dKNIGHT' = 'dKNIGHT',
+  'wMP' = 'wMP',
+
   'FUSDT' = 'FUSDT',
   'USDC' = 'USDC',
   'FTM' = 'FTM',

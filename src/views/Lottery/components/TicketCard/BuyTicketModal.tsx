@@ -63,7 +63,7 @@ const BuyTicketModal: React.FC<BuyTicketModalProps> = ({ max, onDismiss }) => {
   }, [maxTickets])
 
   const cakeCosts = (amount: string): number => {
-    return +amount * 10
+    return +amount * 0.1
   }
   return (
     <Modal title={TranslateString(450, 'Enter amount of tickets to buy')} onDismiss={onDismiss}>
@@ -73,20 +73,20 @@ const BuyTicketModal: React.FC<BuyTicketModalProps> = ({ max, onDismiss }) => {
         onChange={handleChange}
         max={fullBalance}
         symbol="TICKET"
-        availableSymbol="CAKE"
+        availableSymbol="KNIGHT"
       />
       <div>
-        <Tips>{TranslateString(456, 'Your amount must be a multiple of 10 CAKE')}</Tips>
-        <Tips>{TranslateString(458, '1 Ticket = 10 CAKE')}</Tips>
+        <Tips>{TranslateString(456, 'Your amount must be a multiple of 10 KNIGHT')}</Tips>
+        <Tips>{TranslateString(458, '1 Ticket = 10 KNIGHT')}</Tips>
       </div>
       <div>
         <Announce>
           {TranslateString(
             478,
-            'Ticket purchases are final. Your CAKE cannot be returned to you after buying tickets.',
+            'Ticket purchases are final. Your KNIGHT cannot be returned to you after buying tickets.',
           )}
         </Announce>
-        <Final>{TranslateString(460, `You will spend: ${cakeCosts(val)} CAKE`)}</Final>
+        <Final>{TranslateString(460, `You will spend: ${cakeCosts(val)} KNIGHT`)}</Final>
       </div>
       <ModalActions>
         <Button fullWidth variant="secondary" onClick={onDismiss}>

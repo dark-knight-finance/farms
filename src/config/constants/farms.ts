@@ -316,6 +316,60 @@ const farms: FarmConfig[] = [
     quoteTokenAdresses: contracts.wftm,
   },
 
+
+
+  {
+    pid: 19,
+    risk: 3,
+    lpSymbol: '5TABLE-FTM LP',
+    lpAddresses: {
+      4002: '0x46F2cC2731f80Aa658B4408F9B533a0d19e9516E',
+      250: '0xFC8af2E2C98CBb73Ebf3A5e42bc43f27f271dd20',
+    },
+    tokenSymbol: '5TABLE',
+    tokenAddresses: {
+      4002: '0xae13d989dac2f0debff460ac112a837c89baa7cd',
+      250: '0x14d6111dbfD64CEb9676a494BF86AA9f7DD54acC',
+    },
+    quoteTokenSymbol: QuoteToken.FTM,
+    quoteTokenAdresses: contracts.wftm,
+  },
+
+
+  {
+    pid: 20,
+    risk: 3,
+    lpSymbol: 'FAST-FTM LP',
+    lpAddresses: {
+      4002: '0x46F2cC2731f80Aa658B4408F9B533a0d19e9516E',
+      250: '0xFee526a245dbF5604189D5Cb86A293CD678De262',
+    },
+    tokenSymbol: 'FAST',
+    tokenAddresses: {
+      4002: '0xae13d989dac2f0debff460ac112a837c89baa7cd',
+      250: '0x0299461eE055bbb6dE11fAfE5a0636A0C3Bd5E8d',
+    },
+    quoteTokenSymbol: QuoteToken.FTM,
+    quoteTokenAdresses: contracts.wftm,
+  },
+
+
+  {
+    pid: 21,
+    risk: 3,
+    lpSymbol: 'MP-FTM LP',
+    lpAddresses: {
+      4002: '0x46F2cC2731f80Aa658B4408F9B533a0d19e9516E',
+      250: '0x20D3BA695fd89053E40C463D68e4Ec16a50B40e2',
+    },
+    tokenSymbol: 'MP',
+    tokenAddresses: {
+      4002: '0xae13d989dac2f0debff460ac112a837c89baa7cd',
+      250: '0x3264810174f577F82DDD4FD08818F368AC363505',
+    },
+    quoteTokenSymbol: QuoteToken.FTM,
+    quoteTokenAdresses: contracts.wftm,
+  },
   
 ]
 
