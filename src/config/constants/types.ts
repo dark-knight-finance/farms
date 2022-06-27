@@ -50,6 +50,8 @@ export interface FarmConfig {
   lpSymbol: string
   lpAddresses: Address
   tokenSymbol: string
+  pricePerToken?: number
+
   tokenAddresses: Address
   quoteTokenSymbol: QuoteToken
   quoteTokenAdresses: Address
@@ -68,6 +70,8 @@ export interface PoolConfig {
   sousId: number
   image?: string
   tokenName: string
+  rewardTokenPrice?: number
+
   stakingTokenName: QuoteToken
   stakingLimit?: number
   stakingTokenAddress?: string
@@ -80,6 +84,8 @@ export interface PoolConfig {
   isFinished?: boolean
   tokenDecimals: number
   addLiquidityUrl?: string
+  rewardTokenDetails?: any
+
 }
 
 export type Nft = {

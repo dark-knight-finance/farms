@@ -1,7 +1,8 @@
 import { useCallback } from 'react'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { useDispatch } from 'react-redux'
-import { fetchFarmUserDataAsync, updateUserStakedBalance, updateUserBalance } from 'state/actions'
+import { fetchFarmUserDataAsync,} from 'state/farms'
+import { updateUserStakedBalance, updateUserBalance } from "state/pools"
 import { stake, sousStake, sousStakeBnb } from 'utils/callHelpers'
 import { useMasterchef, useSousChef } from './useContract'
 

@@ -55,9 +55,10 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
     userData,
     stakingLimit,
     addLiquidityUrl,
+    rewardTokenPrice
   } = pool
 
-  // console.log("apy is", apy);
+  console.log("apy is", apy.toNumber());
 
   const cakeBusd = usePriceCakeBusd()
 
@@ -143,7 +144,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
         </div>
         {!isOldSyrup ? (
           <BalanceAndCompound>
-            <Balance value={getBalanceNumber(earnings, tokenDecimals)} isDisabled={isFinished} />
+            <Balance value={getBalanceNumber(earnings, pool.rewardTokenDetails.rewardTokenDecimals)} isDisabled={isFinished} />
             {sousId === 0 && account && harvest && (
               <HarvestButton
                 disabled={!earnings.toNumber() || pendingTx}
@@ -200,7 +201,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
                 lpLabel={tokenName}
                 suffix=" per $1000"
                 addLiquidityUrl={addLiquidityUrl}
-                cakePrice={cakeBusd}
+                cakePrice={new BigNumber(rewardTokenPrice)}
                 apy={apy}
               />
               <Balance fontSize="14px" isDisabled={isFinished} value={apy?.toNumber()} decimals={2} unit="%" />

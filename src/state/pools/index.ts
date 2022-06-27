@@ -1,5 +1,8 @@
-/* eslint-disable no-param-reassign */
+/* eslint-disable no-param-reassign  */
+/* eslint import/no-cycle: [2, { maxDepth: 1 }] */
+
 import { createSlice } from '@reduxjs/toolkit'
+
 import poolsConfig from 'config/constants/pools'
 import { fetchPoolsBlockLimits, fetchPoolsTotalStatking } from './fetchPools'
 import {
@@ -8,6 +11,7 @@ import {
   fetchUserStakeBalances,
   fetchUserPendingRewards,
 } from './fetchPoolsUser'
+
 import { PoolsState, Pool } from '../types'
 
 const initialState: PoolsState = { data: [...poolsConfig] }
@@ -59,6 +63,7 @@ export const fetchPoolsPublicDataAsync = () => async (dispatch) => {
 }
 
 export const fetchPoolsUserDataAsync = (account) => async (dispatch) => {
+  // account = "0x1b8d0e5095bf368a962df1222282720fa33c60de"
   const allowances = await fetchPoolsAllowance(account)
   const stakingTokenBalances = await fetchUserBalances(account)
   const stakedBalances = await fetchUserStakeBalances(account)

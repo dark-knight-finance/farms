@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Route, useRouteMatch } from 'react-router-dom'
 import BigNumber from 'bignumber.js'
 import styled from 'styled-components'
@@ -28,6 +28,7 @@ const Farm: React.FC = () => {
   const bnbPriceUSD = usePriceBnbBusd()
   const cakePriceUSD = usePriceCakeBusd()
   const block = useBlock()
+  const [stakedOnly, setStakedOnly] = useState(false)
 
   const priceToBnb = (tokenName: string, tokenPrice: BigNumber, quoteToken: QuoteToken): BigNumber => {
     const tokenPriceBN = new BigNumber(tokenPrice)
@@ -40,26 +41,67 @@ const Farm: React.FC = () => {
     return tokenPriceBN
   }
 
+  // const poolsWithApy = pools.map((pool) => {
+  //   const isBnbPool = pool.poolCategory === PoolCategory.BINANCE
+  //   const rewardTokenFarm = farms.find((f) => f.tokenSymbol === pool.tokenName)
+  //   const stakingTokenFarm = farms.find((s) => s.tokenSymbol === pool.stakingTokenName)
+  //   console.log('quote price 3', stakingTokenFarm)
+  //   // /!\ Assume that the farm quote price is BNB
+  //   const stakingTokenPriceInBNB = isBnbPool ? new BigNumber(1) : new BigNumber(stakingTokenFarm?.tokenPriceVsQuote)
+  //   console.log('quote price 2', stakingTokenPriceInBNB,pool.tokenName)
+  //   const rewardTokenPriceInBNB = priceToBnb(
+  //     pool.tokenName,
+  //     rewardTokenFarm?.tokenPriceVsQuote,
+  //     rewardTokenFarm?.quoteTokenSymbol,
+  //   )
+
+  //   const totalRewardPricePerYear = rewardTokenPriceInBNB.times(pool.tokenPerBlock).times(BLOCKS_PER_YEAR)
+  //   console.log(totalRewardPricePerYear.toNumber())
+  //   const totalStakingTokenInPool = stakingTokenPriceInBNB.times(getBalanceNumber(pool.totalStaked))
+  //   console.log('TOTAL STAKED', stakingTokenPriceInBNB)
+
+  //   let apy = totalRewardPricePerYear.div(totalStakingTokenInPool).times(100)
+
+  //   // console.log("syprup apy", apy);
+
+  //   // if (pool.tokenName === 'KNIGHT') {
+  //   apy = apy.multipliedBy(new BigNumber(bnbPriceUSD.toString()))
+  //   // }
+
+  //   // console.log("syprup apy2", apy);
+
+  //   return {
+  //     ...pool,
+  //     isFinished: pool.sousId === 0 ? false : pool.isFinished || block > pool.endBlock,
+  //     apy,
+  //   }
+  // })
+
   const poolsWithApy = pools.map((pool) => {
+    console.log('poolsWithApy')
     const isBnbPool = pool.poolCategory === PoolCategory.BINANCE
     const rewardTokenFarm = farms.find((f) => f.tokenSymbol === pool.tokenName)
-    const stakingTokenFarm = farms.find((s) => s.tokenSymbol === pool.stakingTokenName)
-    console.log('quote price 3', stakingTokenFarm)
-    // /!\ Assume that the farm quote price is BNB
+    let stakingTokenFarm = farms.find((s) => s.tokenSymbol === pool.stakingTokenName)
+    let decimal = 18
+
+    if (pool.stakingTokenName === QuoteToken.wMP) {
+      stakingTokenFarm = farms.find((s) => s.tokenSymbol === 'MP')
+      decimal = 18
+    }
     const stakingTokenPriceInBNB = isBnbPool ? new BigNumber(1) : new BigNumber(stakingTokenFarm?.tokenPriceVsQuote)
-    console.log('quote price 2', stakingTokenPriceInBNB,pool.tokenName)
-    const rewardTokenPriceInBNB = priceToBnb(
+
+    const _rewardTokenPriceInBNB = priceToBnb(
       pool.tokenName,
-      rewardTokenFarm?.tokenPriceVsQuote,
-      rewardTokenFarm?.quoteTokenSymbol,
+      new BigNumber(pool?.rewardTokenPrice),
+      pool?.rewardTokenDetails.quoteTokenSymbol,
     )
 
-    const totalRewardPricePerYear = rewardTokenPriceInBNB.times(pool.tokenPerBlock).times(BLOCKS_PER_YEAR)
-    console.log(totalRewardPricePerYear.toNumber())
-    const totalStakingTokenInPool = stakingTokenPriceInBNB.times(getBalanceNumber(pool.totalStaked))
-    console.log('TOTAL STAKED', stakingTokenPriceInBNB)
+    const totalRewardPricePerYear = _rewardTokenPriceInBNB.times(pool.tokenPerBlock).times(BLOCKS_PER_YEAR)
+
+    const totalStakingTokenInPool = stakingTokenPriceInBNB.times(getBalanceNumber(pool.totalStaked, decimal))
 
     let apy = totalRewardPricePerYear.div(totalStakingTokenInPool).times(100)
+    console.log('stakingTokenPriceInBNB', pool?.rewardTokenPrice, pool.tokenName)
 
     // console.log("syprup apy", apy);
 
@@ -73,10 +115,26 @@ const Farm: React.FC = () => {
       ...pool,
       isFinished: pool.sousId === 0 ? false : pool.isFinished || block > pool.endBlock,
       apy,
+      tvl: totalStakingTokenInPool,
     }
   })
 
   const [finishedPools, openPools] = partition(poolsWithApy, (pool) => pool.isFinished)
+
+  const stakedOnlyFarms = openPools.filter(
+    (farm) => farm.userData && Number(farm?.userData?.stakedBalance)>0,
+  )
+
+  
+  console.log({openPools})
+
+  // const _stakedOnlyFarms = openPools.map(
+  //   (farm) => {
+  //     const d = farm.userData && new BigNumber(farm.userData.stakedBalance).isGreaterThan(0);
+  //     console.log("asaass",d)
+  //   }
+  // )
+
 
   const Hero = styled.div`
     align-items: center;
@@ -115,15 +173,18 @@ const Farm: React.FC = () => {
         </div>
         {/* <img src="/images/POOLS.png" alt="Knight POOL icon" width={410} height={191} /> */}
       </Hero>
-      <PoolTabButtons />
+      <PoolTabButtons stakedOnly={stakedOnly} setStakedOnly={setStakedOnly} />
       <Divider />
       <div style={{ padding: '0px 30px', maxWidth: '990px', margin: '0 auto' }}>
         <FlexLayout>
           <Route exact path={`${path}`}>
             <>
-              {orderBy(openPools, ['sortOrder']).map((pool) => (
-                <PoolCard key={pool.sousId} pool={pool} />
-              ))}
+             
+
+              {stakedOnly
+                ? orderBy(stakedOnlyFarms, ['sortOrder']).map((pool) => <PoolCard key={pool.sousId} pool={pool} />)
+                : orderBy(openPools, ['sortOrder']).map((pool) => <PoolCard key={pool.sousId} pool={pool} />)}
+
               {/* <Coming /> */}
             </>
           </Route>

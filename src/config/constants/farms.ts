@@ -371,6 +371,118 @@ const farms: FarmConfig[] = [
     quoteTokenAdresses: contracts.wftm,
   },
   
+
+  {
+    pid: 22,
+    risk: 3,
+    lpSymbol: 'THUNDER-FTM LP',
+    lpAddresses: {
+      4002: '0x46F2cC2731f80Aa658B4408F9B533a0d19e9516E',
+      250: '0x17187a8fDcE62667aC55cD1Af9c5cf8c2a6ED603',
+    },
+    tokenSymbol: 'THUNDER',
+    tokenAddresses: {
+      4002: '0xae13d989dac2f0debff460ac112a837c89baa7cd',
+      250: '0x8B7ec83ec7a687Dd81596d0251Bae16d4F005B6c',
+    },
+    quoteTokenSymbol: QuoteToken.FTM,
+    quoteTokenAdresses: contracts.wftm,
+  },
+
+  {
+    pid: 23,
+    risk: 3,
+    lpSymbol: 'FSPA-FTM LP',
+    lpAddresses: {
+      4002: '0x46F2cC2731f80Aa658B4408F9B533a0d19e9516E',
+      250: '0x6A70B13bdcf84d0D7F399d3E892c290E59a7E317',
+    },
+    tokenSymbol: 'FSPA',
+    tokenAddresses: {
+      4002: '0xae13d989dac2f0debff460ac112a837c89baa7cd',
+      250: '0x63aad0448F58ae1B98d75456CFC6f39235e353F6',
+    },
+    quoteTokenSymbol: QuoteToken.FTM,
+    quoteTokenAdresses: contracts.wftm,
+  },
+
+
+  {
+    pid: 24,
+    risk: 3,
+    lpSymbol: 'PROTO-FTM LP',
+    lpAddresses: {
+      4002: '0x46F2cC2731f80Aa658B4408F9B533a0d19e9516E',
+      250: '0x4fd0317205eB0D36827A966AC635D28654cCE71b',
+    },
+    tokenSymbol: 'PROTO',
+    tokenAddresses: {
+      4002: '0xae13d989dac2f0debff460ac112a837c89baa7cd',
+      250: '0xa23c4e69e5Eaf4500F2f9301717f12B578b948FB',
+    },
+    quoteTokenSymbol: QuoteToken.FTM,
+    quoteTokenAdresses: contracts.wftm,
+  },
+
+  {
+    pid: 25,
+    risk: 3,
+    lpSymbol: 'FLIBERO-FTM LP',
+    lpAddresses: {
+      4002: '0x46F2cC2731f80Aa658B4408F9B533a0d19e9516E',
+      250: '0x175e8a023D20b62E5E8570c81f03a75ec448Fd07',
+    },
+    tokenSymbol: 'FLIBERO',
+    tokenAddresses: {
+      4002: '0xae13d989dac2f0debff460ac112a837c89baa7cd',
+      250: '0xC3f069D7439baf6D4D6E9478D9Cc77778E62D147',
+    },
+    quoteTokenSymbol: QuoteToken.FTM,
+    quoteTokenAdresses: contracts.wftm,
+  },
+
+
+  {
+    pid: 26,
+    risk: 3,
+    lpSymbol: 'ASNT-FTM LP',
+    lpAddresses: {
+      4002: '0x46F2cC2731f80Aa658B4408F9B533a0d19e9516E',
+      250: '0x8d9221A0cd46ba97DbC303397447BB983925364B',
+    },
+    tokenSymbol: 'ASNT',
+    tokenAddresses: {
+      4002: '0xae13d989dac2f0debff460ac112a837c89baa7cd',
+      250: '0x5B3C1F260E09e653290f24F75abC5e466fD42310',
+    },
+    quoteTokenSymbol: QuoteToken.FTM,
+    quoteTokenAdresses: contracts.wftm,
+  },
+
+
+  {
+    pid: 27,
+    risk: 3,
+    lpSymbol: 'BNB-FTM LP',
+    lpAddresses: {
+      4002: '0x46F2cC2731f80Aa658B4408F9B533a0d19e9516E',
+      250: '0xe0CCAdEA043e82A1d4461167D395D17755C2dA85',
+    },
+    tokenSymbol: 'BNB',
+    tokenAddresses: {
+      4002: '0xae13d989dac2f0debff460ac112a837c89baa7cd',
+      250: '0xD67de0e0a0Fd7b15dC8348Bb9BE742F3c5850454',
+    },
+    quoteTokenSymbol: QuoteToken.FTM,
+    quoteTokenAdresses: contracts.wftm,
+  }
+
+
+
+  
+  
+
+  
 ]
 
 

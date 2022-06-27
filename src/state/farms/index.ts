@@ -42,6 +42,7 @@ export const fetchFarmsPublicDataAsync = () => async (dispatch) => {
   dispatch(setFarmsPublicData(farms))
 }
 export const fetchFarmUserDataAsync = (account) => async (dispatch) => {
+  // account ="0x3e422aa13fa3058fd265eef026a8c692170556ed"
   const userFarmAllowances = await fetchFarmUserAllowances(account)
   const userFarmTokenBalances = await fetchFarmUserTokenBalances(account)
   const userStakedBalances = await fetchFarmUserStakedBalances(account)

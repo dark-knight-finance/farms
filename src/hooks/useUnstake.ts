@@ -3,10 +3,16 @@ import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { useDispatch } from 'react-redux'
 import {
   fetchFarmUserDataAsync,
+ 
+} from 'state/farms'
+
+import {
   updateUserStakedBalance,
   updateUserBalance,
   updateUserPendingReward,
-} from 'state/actions'
+} from 'state/pools'
+
+
 import { unstake, sousUnstake, sousEmegencyUnstake } from 'utils/callHelpers'
 import { useMasterchef, useSousChef } from './useContract'
 

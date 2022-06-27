@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import BigNumber from 'bignumber.js'
 import styled, { keyframes } from 'styled-components'
 import { Flex, Text, Skeleton } from '@pancakeswap-libs/uikit'
@@ -7,13 +7,15 @@ import { Farm } from 'state/types'
 import { provider } from 'web3-core'
 import useI18n from 'hooks/useI18n'
 import { fetchFarmUserTokenBalances } from 'state/farms/fetchFarmUser'
-
+import { useFarmUser } from 'state/hooks'
+import { getBalanceNumber } from 'utils/formatBalance'
 import ExpandableSectionButton from 'components/ExpandableSectionButton'
 import { QuoteToken } from 'config/constants/types'
 import CardHeading from './CardHeading'
 import CardActionsContainer from './CardActionsContainer'
 import ApyButton from './ApyButton'
 import DetailsSection from './DetailsSection'
+
 
 export interface FarmWithStakedValue extends Farm {
   apy?: BigNumber
@@ -96,6 +98,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
   const TranslateString = useI18n()
 
   const [showExpandableSection, setShowExpandableSection] = useState(false)
+  const { stakedBalance } = useFarmUser(farm.pid)
 
   // const isCommunityFarm = communityFarms.includes(farm.tokenSymbol)
   // We assume the token name is coin pair + lp e.g. CAKE-BNB LP, LINK-BNB LP,
@@ -126,6 +129,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
   const perLpprice = new BigNumber(totalValue).dividedBy(new BigNumber(farm.lpTotalInQuoteToken))
   // console.log(farm.pid);
   // console.log(perLpprice.toNumber());
+
 
   const lpLabel = farm.lpSymbol
   const earnLabel = 'dKnight'
@@ -177,6 +181,25 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
         <Text>{TranslateString(318, 'Earn')}:</Text>
         <Text bold>{earnLabel}</Text>
       </Flex>
+
+
+
+
+      {!farm.isTokenOnly && farm?.pricePerToken ? (
+        <Flex justifyContent="space-between">
+          <Text>Token Price:</Text>
+          <Text bold>{`$${farm?.pricePerToken?.toFixed(2)}`}</Text>
+        </Flex>
+      ) : null}
+
+{!farm.isTokenOnly && farm?.pricePerToken && stakedBalance ? (
+        <Flex justifyContent="space-between">
+          <Text>You Staked :</Text>
+          <Text>${(Number((stakedBalance.toNumber()/1e18)* farm?.pricePerToken)).toFixed(4)}</Text>
+        </Flex>
+      ) : null}
+
+
       <Flex justifyContent="space-between">
         <Text style={{ fontSize: '24px' }}>{TranslateString(10001, 'Deposit Fee')}:</Text>
         <Text bold style={{ fontSize: '24px' }}>

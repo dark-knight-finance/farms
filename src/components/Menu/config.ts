@@ -91,31 +91,30 @@ const config: MenuEntry[] = [
         label: 'FTMScan',
         href: 'https://ftmscan.com/token/0x6cc0E0AedbbD3C35283e38668D959F6eb3034856',
       },
-      {label:"Partnership",
-    href:"https://forms.gle/fHuk6oiHvjPNHQP38"},
+      { label: 'Partnership', href: 'https://forms.gle/fHuk6oiHvjPNHQP38' },
       {
         label: 'DappRadar',
         href: '',
       },
       {
         label: 'CoinGecko',
-        href: '',
+        href: 'https://www.coingecko.com/en/coins/darkknight',
       },
       {
         label: 'CoinMarketCap',
         href: '',
       },
+      {
+        label:"Gecko Terminal",
+        href:"https://geckoterminal.com/ftm/darkknight/pools"
+      }
       // {
       //   label: 'AstroTools',
       //   href: 'https://app.astrotools.io/pancake-pair-explorer/0x19e7cbecdd23a16dfa5573df54d98f7caae03019',
       // },
     ],
   },
-  // {
-  //   label: 'Analytics',
-  //   icon: 'InfoIcon',
-  //   href: '#',
-  // },
+  
   {
     label: 'More',
     icon: 'MoreIcon',

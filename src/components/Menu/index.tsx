@@ -27,7 +27,7 @@ const Menu = (props) => {
       cakePriceUsd={cakePriceUsd.toNumber()}
       links={config}
       // socials={socials}
-      priceLink="https://ftmscan.com/address/0x6cc0e0aedbbd3c35283e38668d959f6eb3034856"
+      priceLink="https://www.coingecko.com/en/coins/darkknight"
       {...props}
     />
   )

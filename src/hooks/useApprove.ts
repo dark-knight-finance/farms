@@ -3,7 +3,8 @@ import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { Contract } from 'web3-eth-contract'
 import { ethers } from 'ethers'
 import { useDispatch } from 'react-redux'
-import { updateUserAllowance, fetchFarmUserDataAsync } from 'state/actions'
+import {  fetchFarmUserDataAsync } from 'state/farms'
+import {updateUserAllowance} from "state/pools"
 import { approve } from 'utils/callHelpers'
 import { useMasterchef, useCake, useSousChef, useLottery } from './useContract'
 

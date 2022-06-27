@@ -2,6 +2,8 @@ import BigNumber from 'bignumber.js'
 import erc20 from 'config/abi/erc20.json'
 import masterchefABI from 'config/abi/masterchef.json'
 import multicall from 'utils/multicall'
+import axios from 'axios'
+
 import { getMasterChefAddress } from 'utils/addressHelpers'
 import farmsConfig from 'config/constants/farms'
 import { QuoteToken } from '../../config/constants/types'
@@ -12,6 +14,9 @@ const fetchFarms = async () => {
   const data = await Promise.all(
     farmsConfig.map(async (farmConfig) => {
       const lpAdress = farmConfig.lpAddresses[CHAIN_ID]
+
+
+
       const calls = [
         // Balance of token in the LP contract
         {
@@ -48,6 +53,14 @@ const fetchFarms = async () => {
         },
       ]
 
+
+      const pricePerToken = await getTokenPrice(
+        farmConfig.lpSymbol,
+        farmConfig.isTokenOnly ? farmConfig.tokenAddresses[CHAIN_ID] : lpAdress,
+        !farmConfig.isTokenOnly,
+      )
+
+      console.log("pricePerToken",pricePerToken)
       const [
         tokenBalanceLP,
         quoteTokenBlanceLP,
@@ -143,11 +156,76 @@ const fetchFarms = async () => {
         poolWeight: poolWeight.toNumber(),
         multiplier: `${allocPoint.div(100).toString()}X`,
         depositFeeBP: info.depositFeeBP,
+        pricePerToken,
         KnightPerBlock: new BigNumber(KnightPerBlock).toNumber(),
       }
     }),
   )
   return data
 }
+
+
+const getSingleTokenPrice = async (address) => {
+  const url = `https://api.knightswap.financial/api/v2/assets/${address}`
+  let price = 0
+  try {
+    const resp = await axios.get(url)
+    price = resp.data.data.price_usd
+  } catch (err) {
+    console.error('getSingleTokenPrice', err)
+  }
+
+  console.log("getSingleTokenPrice",price)
+
+  return price
+}
+
+
+const getLPTokenPrice = async (name,address) => {
+  const data = {
+    query: ` {
+    pair(id:"${address.toLowerCase()}"){
+      
+      reserveUSD
+      totalSupply
+       
+    }
+  }`,
+  }
+
+  let price = 0
+  try {
+    const resp = await axios({
+      url: 'https://api.thegraph.com/subgraphs/name/shahzeb8285/dark-knight-two',
+      method: 'post',
+      data,
+    })
+
+    console.log('getLPTokenPrice1114', name,
+    )
+    if(name === "THUNDER-BNB LP "){
+      price = Number(resp.data.data.pair.totalSupply)/ Number(resp.data.data.pair.reserveUSD) 
+
+    }else{
+      price = Number(resp.data.data.pair.reserveUSD) / Number(resp.data.data.pair.totalSupply)
+    }
+  } catch (err) {
+    console.error('getLPTokenPrice', err)
+  }
+
+  return price
+}
+
+
+
+const getTokenPrice = async (name,address, isLP) => {
+  if (isLP) {
+    return getLPTokenPrice(name,address)
+  }
+  return getSingleTokenPrice(address)
+}
+
+
+
 
 export default fetchFarms
