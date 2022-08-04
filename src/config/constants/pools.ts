@@ -835,6 +835,58 @@ const pools: PoolConfig[] = [
   },
 
 
+  {
+    sousId: 33,
+    tokenName: 'FSPA ',
+    stakingTokenName: QuoteToken.dKNIGHT,
+    stakingTokenAddress: '0x6cc0E0AedbbD3C35283e38668D959F6eb3034856',
+    contractAddress: {
+      250: '0xe2902b90dc67f53ec88bad90293ef1b5e26dd7ec',
+      4002: '0xe790a0683b669089AdC199996F89Bd40FEd4C559',
+    },
+    poolCategory: PoolCategory.CORE,
+    projectLink: '',
+    harvest: true,
+    tokenPerBlock: '3.9167',
+    sortOrder: 999,
+    isFinished: false,
+    rewardTokenDetails: {
+      tokenAddress: '0x63aad0448f58ae1b98d75456cfc6f39235e353f6',
+      lpAddress: '0x6a70b13bdcf84d0d7f399d3e892c290e59a7e317',
+      quoteTokenAddress: '0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83',
+      quoteTokenSymbol: 'FTM',
+    },
+    tokenDecimals: 18,
+    addLiquidityUrl:
+      'https://darkdex.knightswap.financial/#/swap?outputCurrency=0xef393310b708761e3b6b59813ef41fe45d853cec',
+  },
+
+
+  {
+    sousId: 34,
+    tokenName: 'Undead',
+    stakingTokenName: QuoteToken.dKNIGHT,
+    stakingTokenAddress: '0x6cc0E0AedbbD3C35283e38668D959F6eb3034856',
+    contractAddress: {
+      250: '0xa7665f89c851661e09548f2a43e3a607969cabca',
+      4002: '0xe790a0683b669089AdC199996F89Bd40FEd4C559',
+    },
+    poolCategory: PoolCategory.CORE,
+    projectLink: 'https://undead.to/',
+    harvest: true,
+    tokenPerBlock: '0.05807',
+    sortOrder: 999,
+    isFinished: false,
+    tokenDecimals: 18,
+    rewardTokenDetails: {
+      tokenAddress: '0x551C61DB482289994e7d426Fc4DB6493918bB81D',
+      lpAddress: '0xBfBC8eeC9d24eb10702D7F233d6cf687D8F1b2b4',
+      quoteTokenAddress: '0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83',
+      quoteTokenSymbol: 'FTM',
+    },
+    addLiquidityUrl:
+      'https://dex.knightswap.financial/#/swap?outputCurrency=0x6cc0E0AedbbD3C35283e38668D959F6eb3034856',
+  },
 
 ]
 

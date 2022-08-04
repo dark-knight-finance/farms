@@ -177,12 +177,16 @@ const Farm: React.FC = () => {
       <Divider />
       <div style={{ padding: '0px 30px', maxWidth: '990px', margin: '0 auto' }}>
         <FlexLayout>
+          {/* <Text>hii</Text> */}
           <Route exact path={`${path}`}>
             <>
+
+
              
 
               {stakedOnly
-                ? orderBy(stakedOnlyFarms, ['sortOrder']).map((pool) => <PoolCard key={pool.sousId} pool={pool} />)
+                ? orderBy(stakedOnlyFarms,    
+                   ['sortOrder']).map((pool) => <PoolCard key={pool.sousId} pool={pool} />)
                 : orderBy(openPools, ['sortOrder']).map((pool) => <PoolCard key={pool.sousId} pool={pool} />)}
 
               {/* <Coming /> */}

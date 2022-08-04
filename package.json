@@ -9,7 +9,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
-    "live":"yarn build && rm -r ../../deployment/farm/* &&  cp -r  build/* ../../deployment/farm/ && cd ../../deployment/farm/ && git add . && git commit -m 'all live' && git push origin main",
+    "live":" yarn build && rm -r ../../deployment/farm/* &&  cp -r  build/* ../../deployment/farm/ && cd ../../deployment/farm/ && git add . && git commit -m 'all live' && git push origin main -f ",
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'"
   },
   "husky": {
